@@ -223,7 +223,7 @@
 			// ButtonRun
 			// 
 			this.ButtonRun.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.ButtonRun.Location = new System.Drawing.Point(543, 68);
+			this.ButtonRun.Location = new System.Drawing.Point(543, 67);
 			this.ButtonRun.Name = "ButtonRun";
 			this.ButtonRun.Size = new System.Drawing.Size(69, 23);
 			this.ButtonRun.TabIndex = 21;
@@ -249,7 +249,7 @@
             this.RecordView_RankB});
 			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle5.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+
 			dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
 			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(204)))));
 			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
@@ -273,6 +273,7 @@
 			// RecordView_Header
 			// 
 			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			this.RecordView_Header.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.RecordView_Header.DefaultCellStyle = dataGridViewCellStyle1;
 			this.RecordView_Header.HeaderText = "";
 			this.RecordView_Header.Name = "RecordView_Header";
@@ -281,13 +282,14 @@
 			// 
 			// RecordView_Name
 			// 
-			this.RecordView_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.RecordView_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.RecordView_Name.HeaderText = "名前";
 			this.RecordView_Name.Name = "RecordView_Name";
 			this.RecordView_Name.ReadOnly = true;
 			// 
 			// RecordView_Date
 			// 
+			this.RecordView_Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.RecordView_Date.HeaderText = "日付";
 			this.RecordView_Date.Name = "RecordView_Date";
 			this.RecordView_Date.ReadOnly = true;
@@ -295,6 +297,7 @@
 			// 
 			// RecordView_Map
 			// 
+			this.RecordView_Map.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
 			this.RecordView_Map.HeaderText = "海域";
 			this.RecordView_Map.Name = "RecordView_Map";
 			this.RecordView_Map.ReadOnly = true;
@@ -302,6 +305,7 @@
 			// 
 			// RecordView_Rank
 			// 
+			this.RecordView_Rank.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.RecordView_Rank.HeaderText = "ランク";
 			this.RecordView_Rank.Name = "RecordView_Rank";
 			this.RecordView_Rank.ReadOnly = true;
@@ -310,6 +314,7 @@
 			// RecordView_RankS
 			// 
 			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			this.RecordView_RankS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.RecordView_RankS.DefaultCellStyle = dataGridViewCellStyle2;
 			this.RecordView_RankS.HeaderText = "S勝利";
 			this.RecordView_RankS.Name = "RecordView_RankS";
@@ -318,6 +323,7 @@
 			// RecordView_RankA
 			// 
 			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			this.RecordView_RankA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.RecordView_RankA.DefaultCellStyle = dataGridViewCellStyle3;
 			this.RecordView_RankA.HeaderText = "A勝利";
 			this.RecordView_RankA.Name = "RecordView_RankA";
@@ -326,6 +332,7 @@
 			// RecordView_RankB
 			// 
 			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			this.RecordView_RankB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.RecordView_RankB.DefaultCellStyle = dataGridViewCellStyle4;
 			this.RecordView_RankB.HeaderText = "B勝利";
 			this.RecordView_RankB.Name = "RecordView_RankB";
@@ -421,7 +428,7 @@
 			// 
 			this.MergeRows.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.MergeRows.AutoSize = true;
-			this.MergeRows.Location = new System.Drawing.Point(475, 70);
+			this.MergeRows.Location = new System.Drawing.Point(475, 69);
 			this.MergeRows.Name = "MergeRows";
 			this.MergeRows.Size = new System.Drawing.Size(62, 19);
 			this.MergeRows.TabIndex = 20;
@@ -495,7 +502,8 @@
 			// 
 			// DialogDropRecordViewer
 			// 
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.ClientSize = new System.Drawing.Size(624, 441);
 			this.Controls.Add(this.splitContainer1);
 			this.Controls.Add(this.statusStrip1);

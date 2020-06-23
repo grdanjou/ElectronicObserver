@@ -21,6 +21,7 @@ namespace ElectronicObserver.Window.Dialog
 		public DialogTextSelect()
 		{
 			InitializeComponent();
+			Font = Utility.Configuration.Config.UI.MainFont;
 
 			ControlHelper.SetDoubleBuffered(tableLayoutPanel1);
 		}

@@ -238,11 +238,14 @@ namespace ElectronicObserver.Resource
 		}
 
 
-		public bool Load()
+		public bool Load(ElectronicObserver.Window.FormMain formMain)
 		{
 
 			try
 			{
+				float dpiScale = ElectronicObserver.Window.Support.ControlHelper.GetDpiScale(formMain);
+				Icons.ImageSize = ElectronicObserver.Window.Support.ControlHelper.ScaleSize(Icons.ImageSize, dpiScale);
+				Equipments.ImageSize = ElectronicObserver.Window.Support.ControlHelper.ScaleSize(Equipments.ImageSize, dpiScale);
 
 				LoadFromArchive(AssetFilePath);
 				return true;
@@ -486,8 +489,9 @@ namespace ElectronicObserver.Resource
 				if (bmp.Size != imglist.ImageSize)
 				{
 
+					Bitmap bmp_ = new Bitmap(bmp, imglist.ImageSize);
 					bmp.Dispose();
-					bmp = CreateBlankImage();
+					bmp = bmp_;
 
 				}
 

@@ -229,7 +229,7 @@
             this.ColumnEquipment});
 			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle5.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+
 			dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
 			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(204)))));
 			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
@@ -248,6 +248,7 @@
 			// ColumnLevel
 			// 
 			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			this.ColumnLevel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.ColumnLevel.DefaultCellStyle = dataGridViewCellStyle1;
 			this.ColumnLevel.HeaderText = "Lv";
 			this.ColumnLevel.Name = "ColumnLevel";
@@ -257,6 +258,7 @@
 			// ColumnExp
 			// 
 			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			this.ColumnExp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.ColumnExp.DefaultCellStyle = dataGridViewCellStyle2;
 			this.ColumnExp.HeaderText = "必要Exp";
 			this.ColumnExp.Name = "ColumnExp";
@@ -266,6 +268,7 @@
 			// ColumnSortieCount
 			// 
 			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			this.ColumnSortieCount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.ColumnSortieCount.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ColumnSortieCount.HeaderText = "出撃回数";
 			this.ColumnSortieCount.Name = "ColumnSortieCount";
@@ -275,6 +278,7 @@
 			// ColumnASW
 			// 
 			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			this.ColumnASW.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.ColumnASW.DefaultCellStyle = dataGridViewCellStyle4;
 			this.ColumnASW.HeaderText = "対潜";
 			this.ColumnASW.Name = "ColumnASW";
@@ -308,7 +312,8 @@
 			// 
 			// DialogExpChecker
 			// 
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.ClientSize = new System.Drawing.Size(624, 441);
 			this.Controls.Add(this.GroupExp);
 			this.Controls.Add(this.groupBox1);

@@ -187,21 +187,21 @@ namespace ElectronicObserver.Window
 				column.SortMode = c.FormQuest.AllowUserToSortRows ? DataGridViewColumnSortMode.Automatic : DataGridViewColumnSortMode.NotSortable;
 			}
 
-			if (c.UI.IsLayoutFixed)
-			{
-				QuestView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
-				QuestView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-			}
-			else
-			{
-				QuestView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-				QuestView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			}
 
-			foreach (DataGridViewRow row in QuestView.Rows)
-			{
-				row.Height = 21;
-			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 			Updated();
 

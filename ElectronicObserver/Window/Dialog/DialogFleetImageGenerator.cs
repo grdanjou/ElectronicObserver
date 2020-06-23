@@ -29,6 +29,7 @@ namespace ElectronicObserver.Window.Dialog
 		public DialogFleetImageGenerator()
 		{
 			InitializeComponent();
+			Font = Utility.Configuration.Config.UI.MainFont;
 
 			TextFontList = new TextBox[]{
 				TextTitleFont,

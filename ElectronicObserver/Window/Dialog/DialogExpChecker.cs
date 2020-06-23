@@ -54,6 +54,7 @@ namespace ElectronicObserver.Window.Dialog
 		public DialogExpChecker()
 		{
 			InitializeComponent();
+			Font = Utility.Configuration.Config.UI.MainFont;
 
 			CellStyleModernized = new DataGridViewCellStyle(ColumnLevel.DefaultCellStyle);
 			CellStyleModernized.BackColor =

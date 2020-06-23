@@ -228,23 +228,23 @@ namespace ElectronicObserver.Window
             _shipNameSortMethod = config.FormShipGroup.ShipNameSortMethod;
 
 
-            int rowHeight;
-            if (config.UI.IsLayoutFixed)
-            {
-                ShipView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-                ShipView.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.True;
-                rowHeight = 21;
-            }
-            else
-            {
-                ShipView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-                ShipView.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.False;
+            float dpiScale = ElectronicObserver.Window.Support.ControlHelper.GetDpiScale(this);
+            ShipView.ColumnHeadersHeight = (int)(38 * dpiScale);
+            ShipView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            ShipView.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            int rowHeight = (int)(21 * dpiScale);
 
-                if (ShipView.Rows.Count > 0)
-                    rowHeight = ShipView.Rows[0].GetPreferredHeight(0, DataGridViewAutoSizeRowMode.AllCellsExceptHeader, false);
-                else
-                    rowHeight = 21;
-            }
+
+
+
+
+
+
+
+
+
+
+
 
             foreach (DataGridViewRow row in ShipView.Rows)
             {
@@ -340,7 +340,7 @@ namespace ElectronicObserver.Window
 
             DataGridViewRow row = new DataGridViewRow();
             row.CreateCells(ShipView);
-            row.Height = 21;
+            row.Height = (int)(21 * ElectronicObserver.Window.Support.ControlHelper.GetDpiScale(this));
 
             row.SetValues(
                 ship.MasterID,
@@ -541,12 +541,12 @@ namespace ElectronicObserver.Window
 
 
             // 高さ設定(追加直後に実行すると高さが0になることがあるのでここで実行)
-            int rowHeight = 21;
-            if (!Utility.Configuration.Config.UI.IsLayoutFixed)
-            {
-                if (ShipView.Rows.Count > 0)
-                    rowHeight = ShipView.Rows[0].GetPreferredHeight(0, DataGridViewAutoSizeRowMode.AllCellsExceptHeader, false);
-            }
+            int rowHeight = (int)(21 * ElectronicObserver.Window.Support.ControlHelper.GetDpiScale(this));
+
+
+
+
+
 
             foreach (DataGridViewRow row in ShipView.Rows)
                 row.Height = rowHeight;

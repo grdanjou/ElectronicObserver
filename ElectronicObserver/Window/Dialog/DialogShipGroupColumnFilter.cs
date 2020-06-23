@@ -21,6 +21,7 @@ namespace ElectronicObserver.Window.Dialog
 		public DialogShipGroupColumnFilter(DataGridView target, ShipGroupData group)
 		{
 			InitializeComponent();
+			Font = Utility.Configuration.Config.UI.MainFont;
 
 
 			var rows = new LinkedList<DataGridViewRow>();

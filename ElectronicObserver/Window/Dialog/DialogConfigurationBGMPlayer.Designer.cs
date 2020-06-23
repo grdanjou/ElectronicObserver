@@ -177,7 +177,8 @@
 			// DialogConfigurationBGMPlayer
 			// 
 			this.AcceptButton = this.ButtonAccept;
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.CancelButton = this.ButtonCancel;
 			this.ClientSize = new System.Drawing.Size(464, 121);
 			this.Controls.Add(this.FilePathToDirectory);

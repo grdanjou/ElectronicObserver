@@ -220,8 +220,8 @@ namespace ElectronicObserver.Window.Support
 		/// </summary>
 		public static RowStyle GetDefaultRowStyle()
 		{
-			return Utility.Configuration.Config.UI.IsLayoutFixed ?
-				new RowStyle(SizeType.Absolute, 21) :
+			return
+
 				new RowStyle(SizeType.AutoSize);
 		}
 
@@ -314,6 +314,22 @@ namespace ElectronicObserver.Window.Support
 				else
 					panel.ColumnStyles.Add(new ColumnStyle(style.SizeType, style.Width));
 			}
+		}
+
+		/// <summary>
+		/// 標準DPIに対するコントロールのDPIスケールを返します。
+		/// </summary>
+		public static float GetDpiScale(System.Windows.Forms.Control control)
+		{
+			return control.DeviceDpi / 96;
+		}
+
+		/// <summary>
+		/// Sizeを指定した倍率でスケールします。
+		/// </summary>
+		public static Size ScaleSize(Size size, float scale)
+		{
+			return new Size((int)(size.Width * scale), (int)(size.Height * scale));
 		}
 
 

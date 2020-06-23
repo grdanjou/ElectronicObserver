@@ -214,7 +214,7 @@
 			// FormIntegrate
 			// 
 			this.AutoHidePortion = 150D;
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.ClientSize = new System.Drawing.Size(284, 261);
 			this.Controls.Add(this.settingPanel);
 			this.DoubleBuffered = true;

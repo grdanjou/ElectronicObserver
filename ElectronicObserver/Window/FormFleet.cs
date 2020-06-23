@@ -397,7 +397,7 @@ namespace ElectronicObserver.Window
 				ShipResource.Anchor = AnchorStyles.Left;
 				ShipResource.Padding = new Padding(0, 2, 0, 0);
 				ShipResource.Margin = new Padding(2, 0, 2, 1);
-				ShipResource.Size = new Size(30, 20);
+				ShipResource.Size = ElectronicObserver.Window.Support.ControlHelper.ScaleSize(new Size(30, 20), ElectronicObserver.Window.Support.ControlHelper.GetDpiScale(parent));
 				ShipResource.AutoSize = false;
 				ShipResource.Visible = false;
 				ShipResource.ResumeLayout();
@@ -1323,7 +1323,7 @@ namespace ElectronicObserver.Window
 				var levelVisibility = c.FormFleet.EquipmentLevelVisibility;
 				bool showAircraftLevelByNumber = c.FormFleet.ShowAircraftLevelByNumber;
 				int fixedShipNameWidth = c.FormFleet.FixedShipNameWidth;
-				bool isLayoutFixed = c.UI.IsLayoutFixed;
+
 
 				for (int i = 0; i < ControlMember.Length; i++)
 				{
@@ -1332,25 +1332,25 @@ namespace ElectronicObserver.Window
 					member.Equipments.ShowAircraft = showAircraft;
 					if (fixShipNameWidth)
 					{
-						member.Name.AutoSize = false;
-						member.Name.Size = new Size(fixedShipNameWidth, 20);
+
+						member.Name.MaximumSize = new Size(fixedShipNameWidth, Int32.MaxValue);
 					}
 					else
 					{
-						member.Name.AutoSize = true;
+						member.Name.MaximumSize = new Size(Int32.MaxValue, Int32.MaxValue);
 					}
 
 					member.HP.SuspendUpdate();
 					member.HP.Text = shortHPBar ? "" : "HP:";
 					member.HP.HPBar.ColorMorphing = colorMorphing;
 					member.HP.HPBar.SetBarColorScheme(colorScheme);
-					member.HP.MaximumSize = isLayoutFixed ? new Size(int.MaxValue, (int)ControlHelper.GetDefaultRowStyle().Height - member.HP.Margin.Vertical) : Size.Empty;
+					member.HP.MaximumSize = Size.Empty;
 					member.HP.ResumeUpdate();
 					member.Level.TextNext = showNext ? "next:" : null;
 					member.Condition.ImageAlign = showConditionIcon ? ContentAlignment.MiddleLeft : ContentAlignment.MiddleCenter;
 					member.Equipments.LevelVisibility = levelVisibility;
 					member.Equipments.ShowAircraftLevelByNumber = showAircraftLevelByNumber;
-					member.Equipments.MaximumSize = isLayoutFixed ? new Size(int.MaxValue, (int)ControlHelper.GetDefaultRowStyle().Height - member.Equipments.Margin.Vertical) : Size.Empty;
+					member.Equipments.MaximumSize = Size.Empty;
 					member.ShipResource.BarFuel.ColorMorphing =
 					member.ShipResource.BarAmmo.ColorMorphing = colorMorphing;
 					member.ShipResource.BarFuel.SetBarColorScheme(colorScheme);

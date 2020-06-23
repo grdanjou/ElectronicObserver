@@ -36,6 +36,7 @@ namespace ElectronicObserver.Window.Dialog
 		private DialogShipGraphicViewer()
 		{
 			InitializeComponent();
+			Font = Utility.Configuration.Config.UI.MainFont;
 			ImagePathList = new List<string>();
 
 			MouseWheel += DialogShipGraphicViewer_MouseWheel;

@@ -43,6 +43,7 @@ namespace ElectronicObserver.Window.Dialog
 		public DialogShipGroupFilter(ShipGroupData group)
 		{
 			InitializeComponent();
+			Font = Utility.Configuration.Config.UI.MainFont;
 
 			{
 				// 一部の列ヘッダを中央揃えにする

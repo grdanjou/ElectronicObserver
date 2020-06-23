@@ -72,6 +72,10 @@ namespace ElectronicObserver.Window.Control
 
 			BarFuel.UsePrevValue = BarAmmo.UsePrevValue = false;
 
+			float dpiScale = ElectronicObserver.Window.Support.ControlHelper.GetDpiScale(this);
+			BarFuel.BarThickness = (int)(BarFuel.BarThickness * dpiScale);
+			BarAmmo.BarThickness = (int)(BarAmmo.BarThickness * dpiScale);
+
 			ResourceTip = resourceTip;
 		}
 

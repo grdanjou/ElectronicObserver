@@ -35,6 +35,7 @@ namespace ElectronicObserver.Window.Dialog
 		public DialogConfiguration()
 		{
 			InitializeComponent();
+			Font = Utility.Configuration.Config.UI.MainFont;
 
 			_shownTime = DateTime.Now;
 		}
@@ -346,7 +347,7 @@ namespace ElectronicObserver.Window.Dialog
 			UI_MainFont.Text = config.UI.MainFont.SerializeFontAttribute;
 			UI_SubFont.Text = config.UI.SubFont.SerializeFontAttribute;
 			UI_BarColorMorphing.Checked = config.UI.BarColorMorphing;
-			UI_IsLayoutFixed.Checked = config.UI.IsLayoutFixed;
+
 			{
 				UI_RenderingTest.MainFont = config.UI.MainFont.FontData;
 				UI_RenderingTest.SubFont = config.UI.SubFont.FontData;
@@ -571,7 +572,7 @@ namespace ElectronicObserver.Window.Dialog
 					config.UI.SubFont = newfont;
 			}
 			config.UI.BarColorMorphing = UI_BarColorMorphing.Checked;
-			config.UI.IsLayoutFixed = UI_IsLayoutFixed.Checked;
+
 
 			//[ログ]
 			config.Log.LogLevel = (int)Log_LogLevel.Value;

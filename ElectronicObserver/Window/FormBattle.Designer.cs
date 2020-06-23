@@ -103,6 +103,7 @@
 			// 
 			// BaseLayoutPanel
 			// 
+			this.BaseLayoutPanel.AutoSize = true;
 			this.BaseLayoutPanel.Controls.Add(this.TableTop);
 			this.BaseLayoutPanel.Controls.Add(this.TableBottom);
 			this.BaseLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -115,6 +116,7 @@
 			// 
 			// TableTop
 			// 
+			this.TableTop.AutoSize = true;
 			this.TableTop.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.TableTop.ColumnCount = 3;
 			this.TableTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 84F));
@@ -262,8 +264,8 @@
 			// SearchingFriend
 			// 
 			this.SearchingFriend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+			this.SearchingFriend.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.SearchingFriend.Location = new System.Drawing.Point(8, 23);
-			this.SearchingFriend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.SearchingFriend.Name = "SearchingFriend";
 			this.SearchingFriend.Size = new System.Drawing.Size(68, 16);
 			this.SearchingFriend.TabIndex = 3;
@@ -274,7 +276,6 @@
 			this.Searching.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
 			this.Searching.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.Searching.Location = new System.Drawing.Point(87, 23);
-			this.Searching.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.Searching.Name = "Searching";
 			this.Searching.Size = new System.Drawing.Size(25, 16);
 			this.Searching.TabIndex = 4;
@@ -295,8 +296,8 @@
 			// SearchingEnemy
 			// 
 			this.SearchingEnemy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+			this.SearchingFriend.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.SearchingEnemy.Location = new System.Drawing.Point(182, 23);
-			this.SearchingEnemy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.SearchingEnemy.Name = "SearchingEnemy";
 			this.SearchingEnemy.Size = new System.Drawing.Size(56, 16);
 			this.SearchingEnemy.TabIndex = 5;
@@ -395,7 +396,7 @@
 			// FormBattle
 			// 
 			this.AutoHidePortion = 150D;
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.ClientSize = new System.Drawing.Size(300, 300);
 			this.ContextMenuStrip = this.RightClickMenu;
 			this.Controls.Add(this.BaseLayoutPanel);

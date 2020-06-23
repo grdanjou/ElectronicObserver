@@ -46,7 +46,7 @@
             this.TableMember.Location = new System.Drawing.Point(0, 24);
             this.TableMember.Name = "TableMember";
             this.TableMember.RowCount = 1;
-            this.TableMember.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.TableMember.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
             this.TableMember.Size = new System.Drawing.Size(0, 21);
             this.TableMember.TabIndex = 1;
             this.TableMember.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.TableMember_CellPaint);
@@ -65,7 +65,7 @@
             this.TableFleet.Location = new System.Drawing.Point(0, 0);
             this.TableFleet.Name = "TableFleet";
             this.TableFleet.RowCount = 1;
-            this.TableFleet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.TableFleet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
             this.TableFleet.Size = new System.Drawing.Size(0, 21);
             this.TableFleet.TabIndex = 2;
             // 
@@ -149,7 +149,7 @@
             // FormFleet
             // 
             this.AutoHidePortion = 150D;
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(300, 200);

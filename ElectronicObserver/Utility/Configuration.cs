@@ -227,10 +227,10 @@ namespace ElectronicObserver.Utility
 					//*/
 				};
 
-				/// <summary>
-				/// 固定レイアウト(フォントに依存しないレイアウト)を利用するか
-				/// </summary>
-				public bool IsLayoutFixed;
+
+
+
+
 
 
 				public ConfigUI()
@@ -238,7 +238,7 @@ namespace ElectronicObserver.Utility
 					MainFont = new Font("Meiryo UI", 12, FontStyle.Regular, GraphicsUnit.Pixel);
 					SubFont = new Font("Meiryo UI", 10, FontStyle.Regular, GraphicsUnit.Pixel);
 					BarColorMorphing = false;
-					IsLayoutFixed = true;
+
 				}
 			}
 			/// <summary>UI</summary>

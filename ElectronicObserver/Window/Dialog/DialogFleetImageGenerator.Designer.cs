@@ -243,7 +243,7 @@
 			// ButtonAlert
 			// 
 			this.ButtonAlert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.ButtonAlert.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+
 			this.ButtonAlert.ForeColor = System.Drawing.Color.Red;
 			this.ButtonAlert.Location = new System.Drawing.Point(6, 332);
 			this.ButtonAlert.Name = "ButtonAlert";
@@ -943,7 +943,8 @@
 			// DialogFleetImageGenerator
 			// 
 			this.AcceptButton = this.ButtonOK;
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.CancelButton = this.ButtonCancel;
 			this.ClientSize = new System.Drawing.Size(464, 401);
 			this.Controls.Add(this.tabControl1);

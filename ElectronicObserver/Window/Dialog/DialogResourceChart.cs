@@ -55,6 +55,7 @@ namespace ElectronicObserver.Window.Dialog
 		public DialogResourceChart()
 		{
 			InitializeComponent();
+			Font = Utility.Configuration.Config.UI.MainFont;
 		}
 
 

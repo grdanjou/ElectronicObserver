@@ -23,6 +23,7 @@ namespace ElectronicObserver.Window.Dialog
 		public DialogShipGroupSortOrder(DataGridView target, ShipGroupData group)
 		{
 			InitializeComponent();
+			Font = Utility.Configuration.Config.UI.MainFont;
 
 			var rows_enabled = new LinkedList<DataGridViewRow>();
 			var rows_disabled = new LinkedList<DataGridViewRow>();

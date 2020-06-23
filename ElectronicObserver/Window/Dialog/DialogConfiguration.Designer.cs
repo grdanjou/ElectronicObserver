@@ -643,6 +643,7 @@
             // 
             // UI_IsLayoutFixed
             // 
+            this.UI_IsLayoutFixed.Enabled = false;
             this.UI_IsLayoutFixed.AutoSize = true;
             this.UI_IsLayoutFixed.Location = new System.Drawing.Point(8, 89);
             this.UI_IsLayoutFixed.Name = "UI_IsLayoutFixed";
@@ -2749,7 +2750,7 @@
             this.BGMPlayer_ColumnSetting});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
@@ -2777,6 +2778,7 @@
             // 
             // BGMPlayer_ColumnContent
             // 
+            this.BGMPlayer_ColumnContent.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.BGMPlayer_ColumnContent.HeaderText = "シーン";
             this.BGMPlayer_ColumnContent.Name = "BGMPlayer_ColumnContent";
             this.BGMPlayer_ColumnContent.ReadOnly = true;
@@ -2792,6 +2794,7 @@
             // 
             // BGMPlayer_ColumnSetting
             // 
+            this.BGMPlayer_ColumnSetting.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.BGMPlayer_ColumnSetting.HeaderText = "設定";
             this.BGMPlayer_ColumnSetting.Name = "BGMPlayer_ColumnSetting";
             this.BGMPlayer_ColumnSetting.Width = 40;
@@ -2862,7 +2865,8 @@
             // DialogConfiguration
             // 
             this.AcceptButton = this.ButtonOK;
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.ButtonCancel;
             this.ClientSize = new System.Drawing.Size(704, 441);
             this.Controls.Add(this.Log_PlayTime);

@@ -104,6 +104,7 @@ namespace ElectronicObserver.Window.Dialog
 		public DialogShipGroupCSVOutput()
 		{
 			InitializeComponent();
+			Font = Utility.Configuration.Config.UI.MainFont;
 
 			DialogSaveCSV.InitialDirectory = Utility.Configuration.Config.Connection.SaveDataPath;
 

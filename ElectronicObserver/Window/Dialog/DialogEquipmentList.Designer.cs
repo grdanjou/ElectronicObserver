@@ -86,6 +86,7 @@
             // 
             // EquipmentView_ID
             // 
+            this.EquipmentView_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.EquipmentView_ID.HeaderText = "ID";
             this.EquipmentView_ID.Name = "EquipmentView_ID";
             this.EquipmentView_ID.ReadOnly = true;
@@ -110,6 +111,7 @@
             // 
             // EquipmentView_CountAll
             // 
+            this.EquipmentView_CountAll.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.EquipmentView_CountAll.HeaderText = "全個数";
             this.EquipmentView_CountAll.Name = "EquipmentView_CountAll";
             this.EquipmentView_CountAll.ReadOnly = true;
@@ -117,6 +119,7 @@
             // 
             // EquipmentView_CountRemain
             // 
+            this.EquipmentView_CountRemain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.EquipmentView_CountRemain.HeaderText = "余個数";
             this.EquipmentView_CountRemain.Name = "EquipmentView_CountRemain";
             this.EquipmentView_CountRemain.ReadOnly = true;
@@ -217,6 +220,7 @@
             // 
             // DetailView_Level
             // 
+            this.DetailView_Level.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.DetailView_Level.HeaderText = "改修";
             this.DetailView_Level.Name = "DetailView_Level";
             this.DetailView_Level.ReadOnly = true;
@@ -224,6 +228,7 @@
             // 
             // DetailView_AircraftLevel
             // 
+            this.DetailView_AircraftLevel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.DetailView_AircraftLevel.HeaderText = "練度";
             this.DetailView_AircraftLevel.Name = "DetailView_AircraftLevel";
             this.DetailView_AircraftLevel.ReadOnly = true;
@@ -231,6 +236,7 @@
             // 
             // DetailView_CountAll
             // 
+            this.DetailView_CountAll.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.DetailView_CountAll.HeaderText = "全個数";
             this.DetailView_CountAll.Name = "DetailView_CountAll";
             this.DetailView_CountAll.ReadOnly = true;
@@ -238,6 +244,7 @@
             // 
             // DetailView_CountRemain
             // 
+            this.DetailView_CountRemain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.DetailView_CountRemain.HeaderText = "余個数";
             this.DetailView_CountRemain.Name = "DetailView_CountRemain";
             this.DetailView_CountRemain.ReadOnly = true;
@@ -253,7 +260,8 @@
             // 
             // DialogEquipmentList
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(640, 480);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.TopMenu);

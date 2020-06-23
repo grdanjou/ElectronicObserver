@@ -35,6 +35,7 @@ namespace ElectronicObserver.Window.Dialog
 		public DialogWhitecap()
 		{
 			InitializeComponent();
+			Font = Utility.Configuration.Config.UI.MainFont;
 
 			birthRule = Utility.Configuration.Config.Whitecap.BirthRule;
 			aliveRule = Utility.Configuration.Config.Whitecap.AliveRule;

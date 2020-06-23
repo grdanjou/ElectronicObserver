@@ -18,6 +18,7 @@ namespace ElectronicObserver.Window.Dialog
 		public DialogAlbumShipParameter()
 		{
 			InitializeComponent();
+			Font = Utility.Configuration.Config.UI.MainFont;
 		}
 
 		public DialogAlbumShipParameter(int shipID)
