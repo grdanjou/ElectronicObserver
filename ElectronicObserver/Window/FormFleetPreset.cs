@@ -152,12 +152,12 @@ namespace ElectronicObserver.Window
 
 					if (config.FormFleet.FixShipNameWidth)
 					{
-						ship.AutoSize = false;
-						ship.Size = new Size(config.FormFleet.FixedShipNameWidth, 20);
+
+						ship.MaximumSize = new Size(config.FormFleet.FixedShipNameWidth, Int32.MaxValue);
 					}
 					else
 					{
-						ship.AutoSize = true;
+						ship.MaximumSize = new Size(Int32.MaxValue, Int32.MaxValue);
 					}
 				}
 			}

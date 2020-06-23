@@ -32,7 +32,7 @@
             // 
             // ShipStatusLevel
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.DoubleBuffered = true;
             this.Name = "ShipStatusLevel";
             this.Size = new System.Drawing.Size(80, 20);

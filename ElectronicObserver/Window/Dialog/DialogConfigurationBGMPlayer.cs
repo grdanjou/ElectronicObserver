@@ -20,6 +20,7 @@ namespace ElectronicObserver.Window.Dialog
 		public DialogConfigurationBGMPlayer(SyncBGMPlayer.SoundHandle handle)
 		{
 			InitializeComponent();
+			Font = Utility.Configuration.Config.UI.MainFont;
 
 			FilePath.Text = handle.Path;
 			IsLoop.Checked = handle.IsLoop;

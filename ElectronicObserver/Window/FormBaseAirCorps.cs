@@ -93,7 +93,7 @@ namespace ElectronicObserver.Window
 				Squadrons = new ShipStatusEquipment
 				{
 					Anchor = AnchorStyles.Left,
-					Padding = new Padding(0, 1, 0, 2),
+					Padding = new Padding(0, 2, 0, 2),
 					Margin = new Padding(2, 0, 2, 0),
 					Size = new Size(40, 20),
 					AutoSize = true,

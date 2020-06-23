@@ -193,7 +193,7 @@ namespace Browser
 			HeartbeatTimer.Start();
 
 
-			BrowserHost.AsyncRemoteRun(() => BrowserHost.Proxy.GetIconResource());
+			SetIconResource();
 
 
 			InitializeBrowser();
@@ -573,12 +573,12 @@ namespace Browser
 
 			if (StyleSheetApplied)
 			{
-				Browser.Size = Browser.MinimumSize = new Size(
-					(int)(KanColleSize.Width * zoomFactor),
-					(int)(KanColleSize.Height * zoomFactor)
-					);
 
-				CenteringBrowser();
+
+
+
+
+
 			}
 
 			if (fit)
@@ -788,35 +788,35 @@ namespace Browser
 
 
 
-		public void SetIconResource(byte[] canvas)
+		public void SetIconResource()
 		{
 
-			string[] keys = new string[] {
-				"Browser_ScreenShot",
-				"Browser_Zoom",
-				"Browser_ZoomIn",
-				"Browser_ZoomOut",
-				"Browser_Unmute",
-				"Browser_Mute",
-				"Browser_Refresh",
-				"Browser_Navigate",
-				"Browser_Other",
-			};
-			int unitsize = 16 * 16 * 4;
-
-			for (int i = 0; i < keys.Length; i++)
+			using (var archive = new System.IO.Compression.ZipArchive(File.OpenRead("Assets.zip"), System.IO.Compression.ZipArchiveMode.Read))
 			{
-				Bitmap bmp = new Bitmap(16, 16, PixelFormat.Format32bppArgb);
-
-				if (canvas != null)
-				{
-					BitmapData bmpdata = bmp.LockBits(new Rectangle(0, 0, bmp.Width, bmp.Height), ImageLockMode.WriteOnly, PixelFormat.Format32bppArgb);
-					Marshal.Copy(canvas, unitsize * i, bmpdata.Scan0, unitsize);
-					bmp.UnlockBits(bmpdata);
-				}
-
-				Icons.Images.Add(keys[i], bmp);
+				Icons.Images.Add("Browser_ScreenShot", new Bitmap(archive.GetEntry(@"Assets/Browser/ScreenShot.png").Open()));
+				Icons.Images.Add("Browser_Zoom", new Bitmap(archive.GetEntry(@"Assets/Browser/Zoom.png").Open()));
+				Icons.Images.Add("Browser_ZoomIn", new Bitmap(archive.GetEntry(@"Assets/Browser/ZoomIn.png").Open()));
+				Icons.Images.Add("Browser_ZoomOut", new Bitmap(archive.GetEntry(@"Assets/Browser/ZoomOut.png").Open()));
+				Icons.Images.Add("Browser_Unmute", new Bitmap(archive.GetEntry(@"Assets/Browser/Unmute.png").Open()));
+				Icons.Images.Add("Browser_Mute", new Bitmap(archive.GetEntry(@"Assets/Browser/Mute.png").Open()));
+				Icons.Images.Add("Browser_Refresh", new Bitmap(archive.GetEntry(@"Assets/Browser/Refresh.png").Open()));
+				Icons.Images.Add("Browser_Navigate", new Bitmap(archive.GetEntry(@"Assets/Browser/Navigate.png").Open()));
+				Icons.Images.Add("Browser_Other", new Bitmap(archive.GetEntry(@"Assets/Browser/Other.png").Open()));
 			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 			ToolMenu_ScreenShot.Image = ToolMenu_Other_ScreenShot.Image =

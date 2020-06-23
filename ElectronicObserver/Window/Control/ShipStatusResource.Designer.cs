@@ -32,7 +32,7 @@
 			// 
 			// ShipStatusResource
 			// 
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.DoubleBuffered = true;
 			this.Name = "ShipStatusResource";
 			this.Size = new System.Drawing.Size(60, 20);

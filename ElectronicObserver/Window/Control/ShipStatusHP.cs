@@ -376,10 +376,10 @@ namespace ElectronicObserver.Window.Control
 
 			_maximumDigit = 999;
 
-			_mainFont = new Font("Meiryo UI", 12, FontStyle.Regular, GraphicsUnit.Pixel);
+			_mainFont = Utility.Configuration.Config.UI.MainFont;
 			_mainFontColor = FromArgb(0xFF000000);
 
-			_subFont = new Font("Meiryo UI", 10, FontStyle.Regular, GraphicsUnit.Pixel);
+			_subFont = Utility.Configuration.Config.UI.SubFont;
 			_subFontColor = FromArgb(0xFF888888);
 
 			_repairFontColor = FromArgb(0xFF000088);
@@ -390,6 +390,8 @@ namespace ElectronicObserver.Window.Control
 			_repairTimeShowMode = ShipStatusHPRepairTimeShowMode.Invisible;
 			_showHPBar = true;
 
+			float dpiScale = ElectronicObserver.Window.Support.ControlHelper.GetDpiScale(this);
+			_HPBar.BarThickness = (int)(_HPBar.BarThickness * dpiScale);
 		}
 
 

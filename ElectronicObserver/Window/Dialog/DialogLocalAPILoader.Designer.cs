@@ -179,7 +179,8 @@
 			// DialogLocalAPILoader
 			// 
 			this.AcceptButton = this.ButtonOpen;
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.CancelButton = this.ButtonCancel;
 			this.ClientSize = new System.Drawing.Size(584, 162);
 			this.Controls.Add(this.panel1);

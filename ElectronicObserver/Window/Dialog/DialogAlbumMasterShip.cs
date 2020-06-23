@@ -34,6 +34,7 @@ namespace ElectronicObserver.Window.Dialog
 		public DialogAlbumMasterShip()
 		{
 			InitializeComponent();
+			Font = Utility.Configuration.Config.UI.MainFont;
 
 			Aircrafts = new ImageLabel[] { Aircraft1, Aircraft2, Aircraft3, Aircraft4, Aircraft5 };
 			Equipments = new ImageLabel[] { Equipment1, Equipment2, Equipment3, Equipment4, Equipment5 };
@@ -134,6 +135,9 @@ namespace ElectronicObserver.Window.Dialog
 
 			//ShipView Initialize
 			ShipView.SuspendLayout();
+
+			float dpiScale = ElectronicObserver.Window.Support.ControlHelper.GetDpiScale(this);
+			splitContainer1.SplitterDistance = (int)(splitContainer1.SplitterDistance * dpiScale);
 
 			ShipView_ShipID.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
 			ShipView_ShipType.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;

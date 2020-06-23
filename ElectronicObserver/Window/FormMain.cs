@@ -106,7 +106,7 @@ namespace ElectronicObserver.Window
 			Utility.Logger.Add(2, SoftwareInformation.SoftwareNameJapanese + " を起動しています…");
 
 
-			ResourceManager.Instance.Load();
+			ResourceManager.Instance.Load(this);
 			RecordManager.Instance.Load();
 			KCDatabase.Instance.Load();
 			NotifierManager.Instance.Initialize(this);
@@ -154,6 +154,11 @@ namespace ElectronicObserver.Window
 			APIObserver.Instance.Start(Utility.Configuration.Config.Connection.Port, this);
 
 
+			float dpiScale = ElectronicObserver.Window.Support.ControlHelper.GetDpiScale(this);
+			WeifenLuo.WinFormsUI.Docking.Resources.DpiScale = dpiScale;
+			WeifenLuo.WinFormsUI.Docking.VS2005AutoHideStrip.DpiScale(dpiScale);
+			WeifenLuo.WinFormsUI.Docking.VS2005DockPaneCaption.DpiScale(dpiScale);
+			WeifenLuo.WinFormsUI.Docking.VS2005DockPaneStrip.DpiScale(dpiScale);
 			MainDockPanel.Extender.FloatWindowFactory = new CustomFloatWindowFactory();
 
 

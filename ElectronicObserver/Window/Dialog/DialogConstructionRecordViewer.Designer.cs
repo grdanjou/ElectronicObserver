@@ -151,7 +151,7 @@
 			this.IsLargeConstruction.AutoSize = true;
 			this.IsLargeConstruction.Checked = true;
 			this.IsLargeConstruction.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-			this.IsLargeConstruction.Location = new System.Drawing.Point(377, 69);
+			this.IsLargeConstruction.Location = new System.Drawing.Point(377, 73);
 			this.IsLargeConstruction.Name = "IsLargeConstruction";
 			this.IsLargeConstruction.Size = new System.Drawing.Size(86, 19);
 			this.IsLargeConstruction.TabIndex = 40;
@@ -182,7 +182,7 @@
 			// ButtonRun
 			// 
 			this.ButtonRun.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.ButtonRun.Location = new System.Drawing.Point(537, 66);
+			this.ButtonRun.Location = new System.Drawing.Point(537, 72);
 			this.ButtonRun.Name = "ButtonRun";
 			this.ButtonRun.Size = new System.Drawing.Size(75, 23);
 			this.ButtonRun.TabIndex = 37;
@@ -194,7 +194,7 @@
 			// 
 			this.MergeRows.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.MergeRows.AutoSize = true;
-			this.MergeRows.Location = new System.Drawing.Point(469, 69);
+			this.MergeRows.Location = new System.Drawing.Point(469, 73);
 			this.MergeRows.Name = "MergeRows";
 			this.MergeRows.Size = new System.Drawing.Size(62, 19);
 			this.MergeRows.TabIndex = 36;
@@ -340,7 +340,7 @@
             this.RecordView_Material1});
 			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle1.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+
 			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
 			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(204)))));
 			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
@@ -362,48 +362,56 @@
 			// 
 			// RecordView_Header
 			// 
+			this.RecordView_Header.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.RecordView_Header.HeaderText = "";
 			this.RecordView_Header.Name = "RecordView_Header";
 			this.RecordView_Header.ReadOnly = true;
 			// 
 			// RecordView_Name
 			// 
+			this.RecordView_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.RecordView_Name.HeaderText = "名前";
 			this.RecordView_Name.Name = "RecordView_Name";
 			this.RecordView_Name.ReadOnly = true;
 			// 
 			// RecordView_Date
 			// 
+			this.RecordView_Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.RecordView_Date.HeaderText = "日付";
 			this.RecordView_Date.Name = "RecordView_Date";
 			this.RecordView_Date.ReadOnly = true;
 			// 
 			// RecordView_Recipe
 			// 
+			this.RecordView_Recipe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.RecordView_Recipe.HeaderText = "レシピ";
 			this.RecordView_Recipe.Name = "RecordView_Recipe";
 			this.RecordView_Recipe.ReadOnly = true;
 			// 
 			// RecordView_SecretaryShip
 			// 
+			this.RecordView_SecretaryShip.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.RecordView_SecretaryShip.HeaderText = "秘書艦";
 			this.RecordView_SecretaryShip.Name = "RecordView_SecretaryShip";
 			this.RecordView_SecretaryShip.ReadOnly = true;
 			// 
 			// RecordView_Material100
 			// 
+			this.RecordView_Material100.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.RecordView_Material100.HeaderText = "100";
 			this.RecordView_Material100.Name = "RecordView_Material100";
 			this.RecordView_Material100.ReadOnly = true;
 			// 
 			// RecordView_Material20
 			// 
+			this.RecordView_Material20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.RecordView_Material20.HeaderText = "20";
 			this.RecordView_Material20.Name = "RecordView_Material20";
 			this.RecordView_Material20.ReadOnly = true;
 			// 
 			// RecordView_Material1
 			// 
+			this.RecordView_Material1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.RecordView_Material1.HeaderText = "1";
 			this.RecordView_Material1.Name = "RecordView_Material1";
 			this.RecordView_Material1.ReadOnly = true;
@@ -416,7 +424,8 @@
 			// 
 			// DialogConstructionRecordViewer
 			// 
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.ClientSize = new System.Drawing.Size(624, 441);
 			this.Controls.Add(this.splitContainer1);
 			this.Controls.Add(this.statusStrip1);

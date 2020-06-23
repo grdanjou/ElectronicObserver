@@ -32,7 +32,7 @@
 			// 
 			// FormCapturing
 			// 
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.Color.Blue;
 			this.ClientSize = new System.Drawing.Size(133, 112);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

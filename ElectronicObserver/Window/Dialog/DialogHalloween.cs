@@ -32,6 +32,7 @@ namespace ElectronicObserver.Window.Dialog
 		public DialogHalloween()
 		{
 			InitializeComponent();
+			Font = Utility.Configuration.Config.UI.MainFont;
 		}
 
 		private void DialogHalloween_Load(object sender, EventArgs e)

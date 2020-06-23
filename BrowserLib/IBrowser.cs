@@ -47,8 +47,8 @@ namespace BrowserLib
 		[OperationContract]
 		void CloseBrowser();
 
-		[OperationContract]
-		void SetIconResource(byte[] canvas);
+
+
 
 	}
 }

@@ -364,9 +364,9 @@ namespace ElectronicObserver.Window
 			BaseLayoutPanel.ResumeLayout();
 
 
-			if (Utility.Configuration.Config.UI.IsLayoutFixed)
-				TableTop.Width = TableTop.GetPreferredSize(BaseLayoutPanel.Size).Width;
-			else
+
+
+
 				TableTop.Width = TableBottom.ClientSize.Width;
 			TableTop.Height = TableTop.GetPreferredSize(BaseLayoutPanel.Size).Height;
 
@@ -1040,9 +1040,9 @@ namespace ElectronicObserver.Window
 				if (_hpBarMoved)
 					return;
 				TableBottom.SetCellPosition(HPBars[BattleIndex.FriendEscort1], new TableLayoutPanelCellPosition(0, 7));
-				bool fixSize = Utility.Configuration.Config.UI.IsLayoutFixed;
+
 				bool showHPBar = Utility.Configuration.Config.FormBattle.ShowHPBar;
-				ControlHelper.SetTableRowStyle(TableBottom, 7, fixSize ? new RowStyle(SizeType.Absolute, showHPBar ? 21 : 16) : new RowStyle(SizeType.AutoSize));
+				ControlHelper.SetTableRowStyle(TableBottom, 7, new RowStyle(SizeType.AutoSize));
 				_hpBarMoved = true;
 			}
 			else
@@ -1079,7 +1079,7 @@ namespace ElectronicObserver.Window
 				WinRank.ForeColor = rank >= 4 ? WinRankColor_Win : WinRankColor_Lose;
 			}
 
-			WinRank.MinimumSize = Utility.Configuration.Config.UI.IsLayoutFixed ? new Size(DefaultBarSize.Width, 0) : new Size(HPBars[0].Width, 0);
+			WinRank.MinimumSize = new Size(HPBars[0].Width, 0);
 		}
 
 
@@ -1303,19 +1303,19 @@ namespace ElectronicObserver.Window
 			BaseLayoutPanel.AutoScroll = config.FormBattle.IsScrollable;
 
 
-			bool fixSize = config.UI.IsLayoutFixed;
+
 			bool showHPBar = config.FormBattle.ShowHPBar;
 
 			TableBottom.SuspendLayout();
-			if (fixSize)
-			{
-				ControlHelper.SetTableColumnStyles(TableBottom, new ColumnStyle(SizeType.AutoSize));
-				ControlHelper.SetTableRowStyle(TableBottom, 0, new RowStyle(SizeType.Absolute, 21));
-				for (int i = 1; i <= 6; i++)
-					ControlHelper.SetTableRowStyle(TableBottom, i, new RowStyle(SizeType.Absolute, showHPBar ? 21 : 16));
-				ControlHelper.SetTableRowStyle(TableBottom, 8, new RowStyle(SizeType.Absolute, 21));
-			}
-			else
+
+
+
+
+
+
+
+
+
 			{
 				ControlHelper.SetTableColumnStyles(TableBottom, new ColumnStyle(SizeType.AutoSize));
 				ControlHelper.SetTableRowStyles(TableBottom, new RowStyle(SizeType.AutoSize));
@@ -1326,7 +1326,7 @@ namespace ElectronicObserver.Window
 				{
 					b.MainFont = MainFont;
 					b.SubFont = SubFont;
-					b.AutoSize = !fixSize;
+					b.AutoSize = true;
 					if (!b.AutoSize)
 					{
 						b.Size = (HPBars[12].Visible && HPBars[18].Visible) ? SmallBarSize : DefaultBarSize;
@@ -1342,20 +1342,20 @@ namespace ElectronicObserver.Window
 			FleetEnemyEscort.MaximumSize =
 			DamageFriend.MaximumSize =
 			DamageEnemy.MaximumSize =
-				fixSize ? DefaultBarSize : Size.Empty;
+				Size.Empty;
 
-			WinRank.MinimumSize = fixSize ? new Size(80, 0) : new Size(HPBars[0].Width, 0);
+			WinRank.MinimumSize = new Size(HPBars[0].Width, 0);
 
 			TableBottom.ResumeLayout();
 
 			TableTop.SuspendLayout();
-			if (fixSize)
-			{
-				ControlHelper.SetTableColumnStyles(TableTop, new ColumnStyle(SizeType.Absolute, 21 * 4));
-				ControlHelper.SetTableRowStyles(TableTop, new RowStyle(SizeType.Absolute, 21));
-				TableTop.Width = TableTop.GetPreferredSize(BaseLayoutPanel.Size).Width;
-			}
-			else
+
+
+
+
+
+
+
 			{
 				ControlHelper.SetTableColumnStyles(TableTop, new ColumnStyle(SizeType.Percent, 100));
 				ControlHelper.SetTableRowStyles(TableTop, new RowStyle(SizeType.AutoSize));

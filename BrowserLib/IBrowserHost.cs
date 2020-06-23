@@ -55,8 +55,8 @@ namespace BrowserLib
 		[OperationContract]
 		void ConfigurationUpdated(BrowserConfiguration config);
 
-		[OperationContract]
-		void GetIconResource();
+
+
 
 		[OperationContract]
 		void RequestNavigation(string baseurl);

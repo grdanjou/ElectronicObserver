@@ -801,6 +801,7 @@ namespace ElectronicObserver.Window.Dialog
 		public DialogBaseAirCorpsSimulation()
 		{
 			InitializeComponent();
+			Font = Utility.Configuration.Config.UI.MainFont;
 
 			TableBaseAirCorpsList = new[] {
 				TableBaseAirCorps1,

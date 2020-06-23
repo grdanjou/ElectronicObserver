@@ -203,7 +203,7 @@
 			this.ShipView.ContextMenuStrip = this.MenuMember;
 			dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
 			dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle9.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+
 			dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
 			dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
 			dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -864,7 +864,7 @@
 			// FormShipGroup
 			// 
 			this.AutoHidePortion = 150D;
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.ClientSize = new System.Drawing.Size(300, 200);
 			this.Controls.Add(this.splitContainer1);
 			this.DoubleBuffered = true;

@@ -17,6 +17,7 @@ namespace ElectronicObserver.Window.Dialog
         public DialogExpeditionCheck()
         {
             InitializeComponent();
+            Font = Utility.Configuration.Config.UI.MainFont;
         }
 
         private void DialogExpeditionCheck_Load(object sender, EventArgs e)

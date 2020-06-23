@@ -561,7 +561,7 @@
             // 
             // FormBrowser
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.SizeAdjuster);
             this.Controls.Add(this.ToolMenu);

@@ -52,8 +52,12 @@ namespace ElectronicObserver.Window.Dialog
 		public DialogDropRecordViewer()
 		{
 			InitializeComponent();
+			Font = Utility.Configuration.Config.UI.MainFont;
 
 			_record = RecordManager.Instance.ShipDrop;
+
+			float dpiScale = ElectronicObserver.Window.Support.ControlHelper.GetDpiScale(this);
+			splitContainer1.SplitterDistance = (int)(splitContainer1.SplitterDistance * dpiScale);
 		}
 
 		private void DialogDropRecordViewer_Load(object sender, EventArgs e)

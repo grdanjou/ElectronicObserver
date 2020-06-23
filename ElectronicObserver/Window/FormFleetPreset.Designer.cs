@@ -56,7 +56,7 @@
             this.TablePresets.Location = new System.Drawing.Point(0, 0);
             this.TablePresets.Name = "TablePresets";
             this.TablePresets.RowCount = 1;
-            this.TablePresets.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.TablePresets.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
             this.TablePresets.Size = new System.Drawing.Size(0, 21);
             this.TablePresets.TabIndex = 4;
             this.TablePresets.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.TablePresets_CellPaint);
@@ -64,7 +64,7 @@
             // FormFleetPreset
             // 
             this.AutoHidePortion = 150D;
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(300, 200);
             this.Controls.Add(this.TablePresets);

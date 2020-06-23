@@ -43,8 +43,12 @@ namespace ElectronicObserver.Window.Dialog
 		public DialogConstructionRecordViewer()
 		{
 			InitializeComponent();
+			Font = Utility.Configuration.Config.UI.MainFont;
 
 			_record = RecordManager.Instance.Construction;
+
+			float dpiScale = ElectronicObserver.Window.Support.ControlHelper.GetDpiScale(this);
+			splitContainer1.SplitterDistance = (int)(splitContainer1.SplitterDistance * dpiScale);
 		}
 
 		private void DialogConstructionRecordViewer_Load(object sender, EventArgs e)

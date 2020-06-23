@@ -749,7 +749,7 @@
             // 
             // FormMain
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(640, 480);
             this.Controls.Add(this.MainDockPanel);
             this.Controls.Add(this.StripStatus);

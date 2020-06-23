@@ -22,6 +22,7 @@ namespace ElectronicObserver.Window.Dialog
 		public DialogLocalAPILoader2()
 		{
 			InitializeComponent();
+			Font = Utility.Configuration.Config.UI.MainFont;
 		}
 
 		private void DialogLocalAPILoader2_Load(object sender, EventArgs e)

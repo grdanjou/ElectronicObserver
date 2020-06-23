@@ -26,6 +26,7 @@ namespace ElectronicObserver.Window.Dialog
 		public DialogAlbumMasterEquipment()
 		{
 			InitializeComponent();
+			Font = Utility.Configuration.Config.UI.MainFont;
 
 			TitleFirepower.ImageList =
 			TitleTorpedo.ImageList =
@@ -81,6 +82,10 @@ namespace ElectronicObserver.Window.Dialog
 
 			//Initialize EquipmentView
 			EquipmentView.SuspendLayout();
+
+			float dpiScale = ElectronicObserver.Window.Support.ControlHelper.GetDpiScale(this);
+			splitContainer1.SplitterDistance = (int)(splitContainer1.SplitterDistance * dpiScale);
+			EquipmentView_Type.Width = (int)(EquipmentView_Type.Width * dpiScale);
 
 			EquipmentView_ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
 			EquipmentView_Icon.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;

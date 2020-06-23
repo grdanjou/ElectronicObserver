@@ -280,43 +280,43 @@ namespace ElectronicObserver.Window
 			}
 		}
 
-		public void GetIconResource()
-		{
 
-			string[] keys = new string[] {
-				"Browser_ScreenShot",
-				"Browser_Zoom",
-				"Browser_ZoomIn",
-				"Browser_ZoomOut",
-				"Browser_Unmute",
-				"Browser_Mute",
-				"Browser_Refresh",
-				"Browser_Navigate",
-				"Browser_Other",
-			};
-			int unitsize = 16 * 16 * 4;
 
-			byte[] canvas = new byte[unitsize * keys.Length];
 
-			for (int i = 0; i < keys.Length; i++)
-			{
-				Image img = ResourceManager.Instance.Icons.Images[keys[i]];
-				if (img != null)
-				{
-					using (Bitmap bmp = new Bitmap(img))
-					{
 
-						BitmapData bmpdata = bmp.LockBits(new Rectangle(0, 0, bmp.Width, bmp.Height), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
-						Marshal.Copy(bmpdata.Scan0, canvas, unitsize * i, unitsize);
-						bmp.UnlockBits(bmpdata);
 
-					}
-				}
-			}
 
-			Browser.AsyncRemoteRun(() => Browser.Proxy.SetIconResource(canvas));
 
-		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 		public void RequestNavigation(string baseurl)

@@ -65,7 +65,11 @@ namespace ElectronicObserver.Window.Dialog
 		public DialogAntiAirDefense()
 		{
 			InitializeComponent();
+			Font = Utility.Configuration.Config.UI.MainFont;
 			enemySlotCountValue = (int)EnemySlotCount.Value;
+
+			float dpiScale = ElectronicObserver.Window.Support.ControlHelper.GetDpiScale(this);
+			splitContainer1.SplitterDistance = (int)(splitContainer1.SplitterDistance * dpiScale);
 		}
 
 		private void DialogAntiAirDefense_Load(object sender, EventArgs e)

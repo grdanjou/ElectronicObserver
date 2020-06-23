@@ -17,6 +17,7 @@ namespace ElectronicObserver.Window.Dialog
 		public DialogVersion()
 		{
 			InitializeComponent();
+			Font = Utility.Configuration.Config.UI.MainFont;
 
 			TextVersion.Text = string.Format("{0} (ver. {1} - {2} Release)", SoftwareInformation.VersionJapanese, SoftwareInformation.VersionEnglish, SoftwareInformation.UpdateTime.ToString("d"));
 		}

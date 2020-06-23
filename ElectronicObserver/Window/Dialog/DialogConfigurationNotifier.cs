@@ -26,6 +26,7 @@ namespace ElectronicObserver.Window.Dialog
 		public DialogConfigurationNotifier(NotifierBase notifier)
 		{
 			InitializeComponent();
+			Font = Utility.Configuration.Config.UI.MainFont;
 
 			_notifier = notifier;
 
