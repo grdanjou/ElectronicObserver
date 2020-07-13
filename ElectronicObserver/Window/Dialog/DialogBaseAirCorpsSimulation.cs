@@ -98,30 +98,32 @@ namespace ElectronicObserver.Window.Dialog
 			public SquadronUI(int baseAirCorpsID, int squadronID, DialogBaseAirCorpsSimulation parent)
 			{
 
+				float dpiScale = ElectronicObserver.Window.Support.ControlHelper.GetDpiScale(parent);
+
 				BaseAirCorpsID = baseAirCorpsID;
 				SquadronID = squadronID;
 
 				AircraftCategory = new ComboBox();
-				AircraftCategory.Size = new Size(160, AircraftCategory.Height);
+				AircraftCategory.Size = new Size((int)(160 * dpiScale), (int)(AircraftCategory.Height * dpiScale));
 				AircraftCategory.Anchor = AnchorStyles.None;
-				AircraftCategory.Margin = new Padding(2, 0, 2, 0);
+				AircraftCategory.Margin = new Padding((int)(2 * dpiScale), 0, (int)(2 * dpiScale), 0);
 				AircraftCategory.DropDownStyle = ComboBoxStyle.DropDownList;
 				AircraftCategory.Items.AddRange(ComboBoxCategory.GetAllCategories().ToArray());
 				AircraftCategory.SelectedValueChanged += AircraftCategory_SelectedValueChanged;
 
 				Aircraft = new ComboBox();
-				Aircraft.Size = new Size(240, Aircraft.Height);
+				Aircraft.Size = new Size((int)(240 * dpiScale), (int)(Aircraft.Height * dpiScale));
 				Aircraft.Anchor = AnchorStyles.None;
-				Aircraft.Margin = new Padding(2, 0, 2, 0);
+				Aircraft.Margin = new Padding((int)(2 * dpiScale), 0, (int)(2 * dpiScale), 0);
 				Aircraft.DropDownStyle = ComboBoxStyle.DropDownList;
 				Aircraft.SelectedValueChanged += Aircraft_SelectedValueChanged;
 
 				AircraftCount = new NumericUpDown();
-				AircraftCount.Size = new Size(60, AircraftCount.Height);
+				AircraftCount.Size = new Size((int)(60 * dpiScale), (int)(AircraftCount.Height * dpiScale));
 				AircraftCount.Anchor = AnchorStyles.None;
 				AircraftCount.Maximum = AircraftCount.Minimum = 0;
 				AircraftCount.TextAlign = HorizontalAlignment.Right;
-				AircraftCount.Margin = new Padding(2, 0, 2, 0);
+				AircraftCount.Margin = new Padding((int)(2 * dpiScale), 0, (int)(2 * dpiScale), 0);
 				AircraftCount.ValueChanged += AircraftCount_ValueChanged;
 
 				AirSuperioritySortie = NewLabel();
@@ -363,6 +365,8 @@ namespace ElectronicObserver.Window.Dialog
 			public BaseAirCorpsUI(int baseAirCorpsID, DialogBaseAirCorpsSimulation parent)
 			{
 
+				float dpiScale = ElectronicObserver.Window.Support.ControlHelper.GetDpiScale(parent);
+
 				BaseAirCorpsID = baseAirCorpsID;
 
 				TitleAircraftCategory = NewTitleLabel();
@@ -390,23 +394,23 @@ namespace ElectronicObserver.Window.Dialog
 				TitleAutoDistance.Text = "目標半径";
 
 				AutoAirSuperiority = new NumericUpDown();
-				AutoAirSuperiority.Size = new Size(60, AutoAirSuperiority.Height);
+				AutoAirSuperiority.Size = new Size((int)(78 * dpiScale), (int)(AutoAirSuperiority.Height * dpiScale));
 				AutoAirSuperiority.Anchor = AnchorStyles.None;
 				AutoAirSuperiority.Maximum = 9999;
 				AutoAirSuperiority.TextAlign = HorizontalAlignment.Right;
-				AutoAirSuperiority.Margin = new Padding(2, 0, 2, 0);
+				AutoAirSuperiority.Margin = new Padding((int)(2 * dpiScale), 0, (int)(2 * dpiScale), 0);
 
 				AutoDistance = new NumericUpDown();
-				AutoDistance.Size = new Size(60, AutoDistance.Height);
+				AutoDistance.Size = new Size((int)(78 * dpiScale), (int)(AutoDistance.Height * dpiScale));
 				AutoDistance.Anchor = AnchorStyles.None;
 				AutoDistance.Maximum = 20;
 				AutoDistance.TextAlign = HorizontalAlignment.Right;
-				AutoDistance.Margin = new Padding(2, 0, 2, 0);
+				AutoDistance.Margin = new Padding((int)(2 * dpiScale), 0, (int)(2 * dpiScale), 0);
 
 				AutoAirSuperiorityMode = new ComboBox();
-				AutoAirSuperiorityMode.Size = new Size(160, AutoAirSuperiorityMode.Height);
+				AutoAirSuperiorityMode.Size = new Size((int)(160 * dpiScale), (int)(AutoAirSuperiorityMode.Height * dpiScale));
 				AutoAirSuperiorityMode.Anchor = AnchorStyles.None;
-				AutoAirSuperiorityMode.Margin = new Padding(2, 0, 2, 0);
+				AutoAirSuperiorityMode.Margin = new Padding((int)(2 * dpiScale), 0, (int)(2 * dpiScale), 0);
 				AutoAirSuperiorityMode.DropDownStyle = ComboBoxStyle.DropDownList;
 				AutoAirSuperiorityMode.Items.Add(-1);
 				AutoAirSuperiorityMode.Items.Add(1);
@@ -419,19 +423,19 @@ namespace ElectronicObserver.Window.Dialog
 				AutoAirSuperiorityMode.SelectedIndex = 0;
 
 				AutoOrganizeSortie = new Button();
-				AutoOrganizeSortie.Size = new Size(60, AutoOrganizeSortie.Height);
+				AutoOrganizeSortie.Size = new Size((int)(78 * dpiScale), (int)(AutoOrganizeSortie.Height * dpiScale));
 				AutoOrganizeSortie.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-				AutoOrganizeSortie.Margin = new Padding(2, 0, 2, 0);
+				AutoOrganizeSortie.Margin = new Padding((int)(2 * dpiScale), 0, (int)(2 * dpiScale), 0);
 				AutoOrganizeSortie.Text = "出撃編成";
 				AutoOrganizeSortie.Click += AutoOrganize_Click;
 
 				AutoOrganizeAirDefense = new Button
 				{
-					Size = new Size(60, AutoOrganizeSortie.Height),
 					Anchor = AnchorStyles.Left | AnchorStyles.Right,
-					Margin = new Padding(2, 0, 2, 0),
+					Margin = new Padding((int)(2 * dpiScale), 0, (int)(2 * dpiScale), 0),
 					Text = "防空編成"
 				};
+				AutoOrganizeAirDefense.Size = new Size((int)(78 * dpiScale), (int)(AutoOrganizeAirDefense.Height * dpiScale));
 				AutoOrganizeAirDefense.Click += AutoOrganize_Click;
 
 				Squadrons = new SquadronUI[4];
@@ -464,6 +468,7 @@ namespace ElectronicObserver.Window.Dialog
 				var label = new Label
 				{
 					Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right,
+					AutoSize = true,
 					Padding = new Padding(0, 1, 0, 1),
 					Margin = new Padding(2, 1, 2, 1),
 					TextAlign = ContentAlignment.MiddleCenter
@@ -477,6 +482,7 @@ namespace ElectronicObserver.Window.Dialog
 				var label = new Label
 				{
 					Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right,
+					AutoSize = true,
 					Padding = new Padding(0, 1, 0, 1),
 					Margin = new Padding(2, 1, 2, 1),
 					TextAlign = ContentAlignment.MiddleRight
@@ -821,11 +827,11 @@ namespace ElectronicObserver.Window.Dialog
 				BaseAirCorpsUIList[i].Updated += BaseAirCorpsUIList_Updated;
 
 				TableBaseAirCorpsList[i].CellPaint += TableBaseAirCorps_CellPaint;
-				ControlHelper.SetTableRowStyles(TableBaseAirCorpsList[i], new RowStyle(SizeType.Absolute, 32));
-				ControlHelper.SetTableColumnStyles(TableBaseAirCorpsList[i], new ColumnStyle(SizeType.Absolute, 72));
+				ControlHelper.SetTableRowStyles(TableBaseAirCorpsList[i], new RowStyle());
+				ControlHelper.SetTableColumnStyles(TableBaseAirCorpsList[i], new ColumnStyle());
 
-				ControlHelper.SetTableColumnStyle(TableBaseAirCorpsList[i], 0, new ColumnStyle(SizeType.Absolute, 164));
-				ControlHelper.SetTableColumnStyle(TableBaseAirCorpsList[i], 1, new ColumnStyle(SizeType.Absolute, 244));
+				ControlHelper.SetTableColumnStyle(TableBaseAirCorpsList[i], 0, new ColumnStyle());
+				ControlHelper.SetTableColumnStyle(TableBaseAirCorpsList[i], 1, new ColumnStyle());
 
 				ControlHelper.SetDoubleBuffered(TableBaseAirCorpsList[i]);
 
