@@ -103,21 +103,21 @@
 			// 
 			// EnabledView_SortDirection
 			// 
+			this.EnabledView_SortDirection.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.EnabledView_SortDirection.HeaderText = "順";
 			this.EnabledView_SortDirection.Name = "EnabledView_SortDirection";
-			this.EnabledView_SortDirection.Width = 40;
 			// 
 			// EnabledView_Up
 			// 
+			this.EnabledView_Up.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.EnabledView_Up.HeaderText = "↑";
 			this.EnabledView_Up.Name = "EnabledView_Up";
-			this.EnabledView_Up.Width = 20;
 			// 
 			// EnabledView_Down
 			// 
+			this.EnabledView_Down.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.EnabledView_Down.HeaderText = "↓";
 			this.EnabledView_Down.Name = "EnabledView_Down";
-			this.EnabledView_Down.Width = 20;
 			// 
 			// tableLayoutPanel1
 			// 
