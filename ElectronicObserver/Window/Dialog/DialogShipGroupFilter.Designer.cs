@@ -171,35 +171,35 @@
 			// 
 			// ExpressionView_Enabled
 			// 
+			this.ExpressionView_Enabled.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.ExpressionView_Enabled.HeaderText = "○";
 			this.ExpressionView_Enabled.Name = "ExpressionView_Enabled";
 			this.ExpressionView_Enabled.ToolTipText = "有効/無効";
-			this.ExpressionView_Enabled.Width = 20;
 			// 
 			// ExpressionView_ExternalAndOr
 			// 
+			this.ExpressionView_ExternalAndOr.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.ExpressionView_ExternalAndOr.HeaderText = "外条件";
 			this.ExpressionView_ExternalAndOr.Items.AddRange(new object[] {
 			"And",
 			"Or"});
 			this.ExpressionView_ExternalAndOr.Name = "ExpressionView_ExternalAndOr";
-			this.ExpressionView_ExternalAndOr.Width = 50;
 			// 
 			// ExpressionView_Inverse
 			// 
+			this.ExpressionView_Inverse.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.ExpressionView_Inverse.HeaderText = "否";
 			this.ExpressionView_Inverse.Name = "ExpressionView_Inverse";
 			this.ExpressionView_Inverse.ToolTipText = "条件を反転するか";
-			this.ExpressionView_Inverse.Width = 20;
 			// 
 			// ExpressionView_InternalAndOr
 			// 
+			this.ExpressionView_InternalAndOr.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.ExpressionView_InternalAndOr.HeaderText = "内条件";
 			this.ExpressionView_InternalAndOr.Items.AddRange(new object[] {
 			"And",
 			"Or"});
 			this.ExpressionView_InternalAndOr.Name = "ExpressionView_InternalAndOr";
-			this.ExpressionView_InternalAndOr.Width = 50;
 			// 
 			// ExpressionView_Expression
 			// 
@@ -211,6 +211,7 @@
 			// 
 			// ExpressionView_Up
 			// 
+			this.ExpressionView_Up.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.ExpressionView_Up.HeaderText = "↑";
 			this.ExpressionView_Up.Name = "ExpressionView_Up";
 			this.ExpressionView_Up.ToolTipText = "上へ";
@@ -218,6 +219,7 @@
 			// 
 			// ExpressionView_Down
 			// 
+			this.ExpressionView_Down.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.ExpressionView_Down.HeaderText = "↓";
 			this.ExpressionView_Down.Name = "ExpressionView_Down";
 			this.ExpressionView_Down.ToolTipText = "下へ";
@@ -311,10 +313,10 @@
 			// 
 			// ExpressionDetailView_Enabled
 			// 
+			this.ExpressionDetailView_Enabled.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.ExpressionDetailView_Enabled.HeaderText = "○";
 			this.ExpressionDetailView_Enabled.Name = "ExpressionDetailView_Enabled";
 			this.ExpressionDetailView_Enabled.ToolTipText = "有効/無効";
-			this.ExpressionDetailView_Enabled.Width = 20;
 			// 
 			// ExpressionDetailView_LeftOperand
 			// 

@@ -45,6 +45,11 @@ namespace ElectronicObserver.Window.Dialog
 			InitializeComponent();
 			Font = Utility.Configuration.Config.UI.MainFont;
 
+			float dpiScale = ElectronicObserver.Window.Support.ControlHelper.GetDpiScale(this);
+			splitContainer1.SplitterDistance = (int)(this.ClientSize.Width * 0.45);
+			splitContainer2.SplitterDistance = (int)(this.ClientSize.Height * 0.55);
+			splitContainer3.SplitterDistance = (int)(this.ClientSize.Height * 0.55);
+
 			{
 				// 一部の列ヘッダを中央揃えにする
 				var headercenter = new DataGridViewCellStyle(ExpressionView_Enabled.HeaderCell.Style)

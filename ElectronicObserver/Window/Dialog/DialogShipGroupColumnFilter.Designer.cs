@@ -118,25 +118,25 @@
             this.ColumnView_AutoSize.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.ColumnView_AutoSize.HeaderText = "自動サイズ";
             this.ColumnView_AutoSize.Name = "ColumnView_AutoSize";
-            this.ColumnView_AutoSize.Width = 66;
             // 
             // ColumnView_Width
             // 
+            this.ColumnView_Width.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.ColumnView_Width.HeaderText = "幅";
             this.ColumnView_Width.Name = "ColumnView_Width";
             this.ColumnView_Width.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // ColumnView_Up
             // 
+            this.ColumnView_Up.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.ColumnView_Up.HeaderText = "↑";
             this.ColumnView_Up.Name = "ColumnView_Up";
-            this.ColumnView_Up.Width = 20;
             // 
             // ColumnView_Down
             // 
+            this.ColumnView_Down.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.ColumnView_Down.HeaderText = "↓";
             this.ColumnView_Down.Name = "ColumnView_Down";
-            this.ColumnView_Down.Width = 20;
             // 
             // label1
             // 
